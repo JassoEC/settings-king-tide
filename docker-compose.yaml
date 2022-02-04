@@ -41,15 +41,15 @@ services:
     networks:
       - ktide-ntw
 
-  front:
-    container_name: front
+  frontend:
+    container_name: frontend
     image: node:16-alpine
     volumes:
       - "../front-king-tide:/app"
     working_dir: /app
     ports:
       - 3000:3000
-    command: npm start
+    command: yarn start
     networks:
       - ktide-ntw
 networks:
